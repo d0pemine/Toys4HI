@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0565B56F2B15B64B00AAE458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B56E2B15B64B00AAE458 /* AppDelegate.swift */; };
+		0565B5712B15B64B00AAE458 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5702B15B64B00AAE458 /* SceneDelegate.swift */; };
+		0565B5732B15B64B00AAE458 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5722B15B64B00AAE458 /* ViewController.swift */; };
+		0565B5762B15B64B00AAE458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0565B5742B15B64B00AAE458 /* Main.storyboard */; };
+		0565B5792B15B64B00AAE458 /* Toys4HI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5772B15B64B00AAE458 /* Toys4HI.xcdatamodeld */; };
+		0565B57B2B15B64C00AAE458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0565B57A2B15B64C00AAE458 /* Assets.xcassets */; };
+		0565B57E2B15B64C00AAE458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0565B57C2B15B64C00AAE458 /* LaunchScreen.storyboard */; };
+		0565B5892B15B64C00AAE458 /* Toys4HITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5882B15B64C00AAE458 /* Toys4HITests.swift */; };
+		0565B5932B15B64C00AAE458 /* Toys4HIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5922B15B64C00AAE458 /* Toys4HIUITests.swift */; };
+		0565B5952B15B64C00AAE458 /* Toys4HIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5942B15B64C00AAE458 /* Toys4HIUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0565B5852B15B64C00AAE458 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0565B5632B15B64B00AAE458 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0565B56A2B15B64B00AAE458;
+			remoteInfo = Toys4HI;
+		};
+		0565B58F2B15B64C00AAE458 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0565B5632B15B64B00AAE458 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0565B56A2B15B64B00AAE458;
+			remoteInfo = Toys4HI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0565B56B2B15B64B00AAE458 /* Toys4HI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toys4HI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0565B56E2B15B64B00AAE458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0565B5702B15B64B00AAE458 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0565B5722B15B64B00AAE458 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0565B5752B15B64B00AAE458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0565B5782B15B64B00AAE458 /* Toys4HI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Toys4HI.xcdatamodel; sourceTree = "<group>"; };
+		0565B57A2B15B64C00AAE458 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0565B57D2B15B64C00AAE458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0565B57F2B15B64C00AAE458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0565B5842B15B64C00AAE458 /* Toys4HITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Toys4HITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0565B5882B15B64C00AAE458 /* Toys4HITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toys4HITests.swift; sourceTree = "<group>"; };
+		0565B58E2B15B64C00AAE458 /* Toys4HIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Toys4HIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0565B5922B15B64C00AAE458 /* Toys4HIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toys4HIUITests.swift; sourceTree = "<group>"; };
+		0565B5942B15B64C00AAE458 /* Toys4HIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toys4HIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0565B5682B15B64B00AAE458 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0565B5812B15B64C00AAE458 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0565B58B2B15B64C00AAE458 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0565B5622B15B64B00AAE458 = {
+			isa = PBXGroup;
+			children = (
+				0565B56D2B15B64B00AAE458 /* Toys4HI */,
+				0565B5872B15B64C00AAE458 /* Toys4HITests */,
+				0565B5912B15B64C00AAE458 /* Toys4HIUITests */,
+				0565B56C2B15B64B00AAE458 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0565B56C2B15B64B00AAE458 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0565B56B2B15B64B00AAE458 /* Toys4HI.app */,
+				0565B5842B15B64C00AAE458 /* Toys4HITests.xctest */,
+				0565B58E2B15B64C00AAE458 /* Toys4HIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0565B56D2B15B64B00AAE458 /* Toys4HI */ = {
+			isa = PBXGroup;
+			children = (
+				0565B56E2B15B64B00AAE458 /* AppDelegate.swift */,
+				0565B5702B15B64B00AAE458 /* SceneDelegate.swift */,
+				0565B5722B15B64B00AAE458 /* ViewController.swift */,
+				0565B5742B15B64B00AAE458 /* Main.storyboard */,
+				0565B57A2B15B64C00AAE458 /* Assets.xcassets */,
+				0565B57C2B15B64C00AAE458 /* LaunchScreen.storyboard */,
+				0565B57F2B15B64C00AAE458 /* Info.plist */,
+				0565B5772B15B64B00AAE458 /* Toys4HI.xcdatamodeld */,
+			);
+			path = Toys4HI;
+			sourceTree = "<group>";
+		};
+		0565B5872B15B64C00AAE458 /* Toys4HITests */ = {
+			isa = PBXGroup;
+			children = (
+				0565B5882B15B64C00AAE458 /* Toys4HITests.swift */,
+			);
+			path = Toys4HITests;
+			sourceTree = "<group>";
+		};
+		0565B5912B15B64C00AAE458 /* Toys4HIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0565B5922B15B64C00AAE458 /* Toys4HIUITests.swift */,
+				0565B5942B15B64C00AAE458 /* Toys4HIUITestsLaunchTests.swift */,
+			);
+			path = Toys4HIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0565B56A2B15B64B00AAE458 /* Toys4HI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0565B5982B15B64C00AAE458 /* Build configuration list for PBXNativeTarget "Toys4HI" */;
+			buildPhases = (
+				0565B5672B15B64B00AAE458 /* Sources */,
+				0565B5682B15B64B00AAE458 /* Frameworks */,
+				0565B5692B15B64B00AAE458 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Toys4HI;
+			productName = Toys4HI;
+			productReference = 0565B56B2B15B64B00AAE458 /* Toys4HI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0565B5832B15B64C00AAE458 /* Toys4HITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0565B59B2B15B64C00AAE458 /* Build configuration list for PBXNativeTarget "Toys4HITests" */;
+			buildPhases = (
+				0565B5802B15B64C00AAE458 /* Sources */,
+				0565B5812B15B64C00AAE458 /* Frameworks */,
+				0565B5822B15B64C00AAE458 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0565B5862B15B64C00AAE458 /* PBXTargetDependency */,
+			);
+			name = Toys4HITests;
+			productName = Toys4HITests;
+			productReference = 0565B5842B15B64C00AAE458 /* Toys4HITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0565B58D2B15B64C00AAE458 /* Toys4HIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0565B59E2B15B64C00AAE458 /* Build configuration list for PBXNativeTarget "Toys4HIUITests" */;
+			buildPhases = (
+				0565B58A2B15B64C00AAE458 /* Sources */,
+				0565B58B2B15B64C00AAE458 /* Frameworks */,
+				0565B58C2B15B64C00AAE458 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0565B5902B15B64C00AAE458 /* PBXTargetDependency */,
+			);
+			name = Toys4HIUITests;
+			productName = Toys4HIUITests;
+			productReference = 0565B58E2B15B64C00AAE458 /* Toys4HIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0565B5632B15B64B00AAE458 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					0565B56A2B15B64B00AAE458 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					0565B5832B15B64C00AAE458 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 0565B56A2B15B64B00AAE458;
+					};
+					0565B58D2B15B64C00AAE458 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 0565B56A2B15B64B00AAE458;
+					};
+				};
+			};
+			buildConfigurationList = 0565B5662B15B64B00AAE458 /* Build configuration list for PBXProject "Toys4HI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0565B5622B15B64B00AAE458;
+			productRefGroup = 0565B56C2B15B64B00AAE458 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0565B56A2B15B64B00AAE458 /* Toys4HI */,
+				0565B5832B15B64C00AAE458 /* Toys4HITests */,
+				0565B58D2B15B64C00AAE458 /* Toys4HIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0565B5692B15B64B00AAE458 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0565B57E2B15B64C00AAE458 /* LaunchScreen.storyboard in Resources */,
+				0565B57B2B15B64C00AAE458 /* Assets.xcassets in Resources */,
+				0565B5762B15B64B00AAE458 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0565B5822B15B64C00AAE458 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0565B58C2B15B64C00AAE458 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0565B5672B15B64B00AAE458 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0565B5792B15B64B00AAE458 /* Toys4HI.xcdatamodeld in Sources */,
+				0565B5732B15B64B00AAE458 /* ViewController.swift in Sources */,
+				0565B56F2B15B64B00AAE458 /* AppDelegate.swift in Sources */,
+				0565B5712B15B64B00AAE458 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0565B5802B15B64C00AAE458 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0565B5892B15B64C00AAE458 /* Toys4HITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0565B58A2B15B64C00AAE458 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0565B5932B15B64C00AAE458 /* Toys4HIUITests.swift in Sources */,
+				0565B5952B15B64C00AAE458 /* Toys4HIUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0565B5862B15B64C00AAE458 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0565B56A2B15B64B00AAE458 /* Toys4HI */;
+			targetProxy = 0565B5852B15B64C00AAE458 /* PBXContainerItemProxy */;
+		};
+		0565B5902B15B64C00AAE458 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0565B56A2B15B64B00AAE458 /* Toys4HI */;
+			targetProxy = 0565B58F2B15B64C00AAE458 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0565B5742B15B64B00AAE458 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0565B5752B15B64B00AAE458 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0565B57C2B15B64C00AAE458 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0565B57D2B15B64C00AAE458 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0565B5962B15B64C00AAE458 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0565B5972B15B64C00AAE458 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0565B5992B15B64C00AAE458 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Toys4HI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mamar.Toys4HI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0565B59A2B15B64C00AAE458 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Toys4HI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mamar.Toys4HI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0565B59C2B15B64C00AAE458 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mamar.Toys4HITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Toys4HI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Toys4HI";
+			};
+			name = Debug;
+		};
+		0565B59D2B15B64C00AAE458 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mamar.Toys4HITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Toys4HI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Toys4HI";
+			};
+			name = Release;
+		};
+		0565B59F2B15B64C00AAE458 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mamar.Toys4HIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Toys4HI;
+			};
+			name = Debug;
+		};
+		0565B5A02B15B64C00AAE458 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mamar.Toys4HIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Toys4HI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0565B5662B15B64B00AAE458 /* Build configuration list for PBXProject "Toys4HI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0565B5962B15B64C00AAE458 /* Debug */,
+				0565B5972B15B64C00AAE458 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0565B5982B15B64C00AAE458 /* Build configuration list for PBXNativeTarget "Toys4HI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0565B5992B15B64C00AAE458 /* Debug */,
+				0565B59A2B15B64C00AAE458 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0565B59B2B15B64C00AAE458 /* Build configuration list for PBXNativeTarget "Toys4HITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0565B59C2B15B64C00AAE458 /* Debug */,
+				0565B59D2B15B64C00AAE458 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0565B59E2B15B64C00AAE458 /* Build configuration list for PBXNativeTarget "Toys4HIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0565B59F2B15B64C00AAE458 /* Debug */,
+				0565B5A02B15B64C00AAE458 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0565B5772B15B64B00AAE458 /* Toys4HI.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0565B5782B15B64B00AAE458 /* Toys4HI.xcdatamodel */,
+			);
+			currentVersion = 0565B5782B15B64B00AAE458 /* Toys4HI.xcdatamodel */;
+			path = Toys4HI.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0565B5632B15B64B00AAE458 /* Project object */;
+}
