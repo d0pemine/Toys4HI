@@ -26,13 +26,20 @@ class SignUpViewController: UIViewController {
         let confirmPassword = ConfirmTextField.text!
         
         if(password != confirmPassword){
-            return
+            showAlert(title: "Password is Wrong!", message: "Password does not match!")
         }
         
-        if(email.hasSuffix("@gmail.com")){
-            
+        if(!email.hasSuffix("@gmail.com")){
+            showAlert(title: "Email is Wrong!", message: "Email must have @gmail.com in it")
         }
+        
     }
 
-
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "DefaultAction"), style: .default))
+        
+        self.present(alert,animated:  true)
+    }
 }
