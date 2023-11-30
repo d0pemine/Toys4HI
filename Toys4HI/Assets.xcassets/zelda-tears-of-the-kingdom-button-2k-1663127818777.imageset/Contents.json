@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "zelda-tears-of-the-kingdom-button-2k-1663127818777.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "mortal-kombat-1-game-fire-god-liu-kang-hd-wallpaper-uhdpaper.com-646@1@k.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "URGENT ARTICLE-19.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
