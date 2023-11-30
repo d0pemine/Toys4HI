@@ -30,7 +30,7 @@ class SignUpViewController: UIViewController {
         }
         
         if(!email.hasSuffix("@gmail.com")){
-//            showAlert(title: "Email is Wrong!", message: "Email must have @gmail.com in it")
+            showAlert(title: "Email is Wrong!", message: "Email must have @gmail.com in it")
         }
         
     }
