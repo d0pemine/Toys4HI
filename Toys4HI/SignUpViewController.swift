@@ -34,6 +34,8 @@ class SignUpViewController: UIViewController {
         let password = PasswordTextField.text!
         let confirmPassword = ConfirmTextField.text!
         
+        fetchUser()
+        
         if(password != confirmPassword){
             showAlert(title: "Password is Wrong!", message: "Password does not match!")
             return
@@ -65,9 +67,11 @@ class SignUpViewController: UIViewController {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         
         do{
-            var results = try context.fetch(request) as! [NSManagedObject]
+            let results = try context.fetch(request) as! [NSManagedObject]
             for data in results{
+                print(userArray)
                 userArray.append(data.value(forKey: "email") as! String)
+                userArray.append(data.value(forKey: "password") as! String)
             }
             print("Fetching Success!")
         }catch{
@@ -75,18 +79,18 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    func isUserExist(email: String){
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        
-        do{
-            var results = try context.fetch(request) as! [NSManagedObject]
-            for data in results{
-                
-            }
-        }catch{
-            
-        }
-    }
+//    func isUserExist(email: String){
+//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+//        
+//        do{
+//            var results = try context.fetch(request) as! [NSManagedObject]
+//            for data in results{
+//                
+//            }
+//        }catch{
+//            
+//        }
+//    }
     
     func showAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
