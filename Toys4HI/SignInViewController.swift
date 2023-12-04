@@ -11,47 +11,57 @@ import CoreData
 class SignInViewController: UIViewController {
 
     var context: NSManagedObjectContext!
-    var userArray: [users] = []
+    var userArray = [users]()
 
-    
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("tes")
 
-        // Do any additional setup after loading the view.
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+        context = appDelegate.persistentContainer.viewContext
     }
     
     @IBAction func LoginButton(_ sender: Any) {
         let password = PasswordTextField.text!
         let email = EmailTextField.text!
+
+        fetchUserData()
         
         if(email == "admin@gmail.com" && password == "admin"){
             if let adminView = storyboard?.instantiateViewController(withIdentifier: "adminView"){
                 self.navigationController?.pushViewController(adminView, animated: true)
             }
-            print("bisa kok")
         }
         
         for user in userArray{
             if(user.email != email || user.password != password){
                 showAlert(title: "Invalid Credentials!", message: "Wrong Email or Password!")
-                print("salah")
+                return
             }else{
-                print("bener")
+                if let homeView = storyboard?.instantiateViewController(withIdentifier: "homeView"){
+                    self.navigationController?.pushViewController(homeView, animated: true)
+                }
             }
+            
         }
+        
+ 
     }
     
     func fetchUserData(){
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        
         do{
-            var results = try context.fetch(request) as! [NSManagedObject]
+            let results = try context.fetch(request) as! [NSManagedObject]
+            
+            // gatau ini for nya ga masuk
             for data in results {
                 userArray.append(users(email: data.value(forKey: "email") as! String, password: data.value(forKey: "password") as! String))
+                print("data: ", data)
             }
         }catch{
             print("Fetching Failed!")

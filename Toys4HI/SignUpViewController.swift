@@ -30,6 +30,7 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func SignUpButton(_ sender: Any) {
+        fetchUser()
         let email = EmailTextField.text!
         let password = PasswordTextField.text!
         let confirmPassword = ConfirmTextField.text!
@@ -54,9 +55,8 @@ class SignUpViewController: UIViewController {
         
         do{
             try context.save()
-            fetchUser()
-            for data in userArray{
-                print(data)
+            if let signInView = storyboard?.instantiateViewController(withIdentifier: "signInView"){
+                self.navigationController?.pushViewController(signInView, animated: true)
             }
         }catch{
             print("Error!")
@@ -70,28 +70,13 @@ class SignUpViewController: UIViewController {
         do{
             let results = try context.fetch(request) as! [NSManagedObject]
             for data in results{
-                print(userArray)
                 userArray.append(data.value(forKey: "email") as! String)
-                userArray.append(data.value(forKey: "password") as! String)
             }
             print("Fetching Success!")
         }catch{
             print("Fetching Failed!")
         }
     }
-    
-//    func isUserExist(email: String){
-//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-//        
-//        do{
-//            var results = try context.fetch(request) as! [NSManagedObject]
-//            for data in results{
-//                
-//            } 
-//        }catch{
-//            
-//        }
-//    }
     
     func showAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
