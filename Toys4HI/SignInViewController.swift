@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import CoreData
 
 class SignInViewController: UIViewController {
+
+    var context: NSManagedObjectContext!
+    var userArray: [users] = []
 
     
     @IBOutlet weak var EmailTextField: UITextField!
@@ -31,19 +35,37 @@ class SignInViewController: UIViewController {
             print("bisa kok")
         }
         
-        if(email == "tes@gmail.com" && password == "tes"){
-            if let homeView = storyboard?.instantiateViewController(withIdentifier: "homeView"){
-                self.navigationController?.pushViewController(homeView, animated: true)
+        for user in userArray{
+            if(user.email != email || user.password != password){
+                showAlert(title: "Invalid Credentials!", message: "Wrong Email or Password!")
+                print("salah")
+            }else{
+                print("bener")
             }
-            print("ini ke home harusnya")
         }
     }
     
-    @IBAction func SignUpButton(_ sender: Any) {
-        if let signUpView = storyboard?.instantiateViewController(withIdentifier: "signUpView"){
-            self.navigationController?.pushViewController(signUpView, animated: true)
+    func fetchUserData(){
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        
+        do{
+            var results = try context.fetch(request) as! [NSManagedObject]
+            for data in results {
+                userArray.append(users(email: data.value(forKey: "email") as! String, password: data.value(forKey: "password") as! String))
+            }
+        }catch{
+            print("Fetching Failed!")
         }
     }
+    
+    func showAlert(title: String, message: String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+
     
     
 }

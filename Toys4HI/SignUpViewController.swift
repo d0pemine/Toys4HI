@@ -33,9 +33,7 @@ class SignUpViewController: UIViewController {
         let email = EmailTextField.text!
         let password = PasswordTextField.text!
         let confirmPassword = ConfirmTextField.text!
-        
-        fetchUser()
-        
+                
         if(password != confirmPassword){
             showAlert(title: "Password is Wrong!", message: "Password does not match!")
             return
@@ -56,7 +54,10 @@ class SignUpViewController: UIViewController {
         
         do{
             try context.save()
-            print("Save success!")
+            fetchUser()
+            for data in userArray{
+                print(data)
+            }
         }catch{
             print("Error!")
         }
@@ -86,7 +87,7 @@ class SignUpViewController: UIViewController {
 //            var results = try context.fetch(request) as! [NSManagedObject]
 //            for data in results{
 //                
-//            }
+//            } 
 //        }catch{
 //            
 //        }
