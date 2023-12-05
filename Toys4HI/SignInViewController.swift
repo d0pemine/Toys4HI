@@ -10,27 +10,33 @@ import CoreData
 
 class SignInViewController: UIViewController {
 
-    var context: NSManagedObjectContext!
     var userArray = [users]()
+    var context: NSManagedObjectContext!
 
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("tes")
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
         context = appDelegate.persistentContainer.viewContext
+        
     }
     
     @IBAction func LoginButton(_ sender: Any) {
-        let password = PasswordTextField.text!
-        let email = EmailTextField.text!
-
         fetchUserData()
+        
+        guard let email = EmailTextField.text, !email.isEmpty else {
+            showAlert(title:"Email is empty",message: "Email must not be empty.")
+            return
+        }
+        
+        guard let password = PasswordTextField.text, !password.isEmpty else {
+            showAlert(title:"Password is empty",message: "Password must not be empty.")
+            return
+        }
         
         if(email == "admin@gmail.com" && password == "admin"){
             if let adminView = storyboard?.instantiateViewController(withIdentifier: "adminView"){
@@ -38,44 +44,39 @@ class SignInViewController: UIViewController {
             }
         }
         
-        for user in userArray{
-            if(user.email != email || user.password != password){
-                showAlert(title: "Invalid Credentials!", message: "Wrong Email or Password!")
-                return
-            }else{
-                if let homeView = storyboard?.instantiateViewController(withIdentifier: "homeView"){
-                    self.navigationController?.pushViewController(homeView, animated: true)
-                }
-            }
-            
+        if !(email.hasSuffix(".com") && email.contains("@")) {
+            showAlert(title: "Email is not valid", message: "Email must be valid!")
+        }
+
+        if userArray.isEmpty {
+            showAlert(title: "Invalid!", message: "There is no registered user!")
+            return
         }
         
- 
+        for user in userArray {
+            if (user.email != email || user.password != password){
+                showAlert(title: "Invalid Credential", message: "Email or Password is wrong")
+            }
+        }
     }
-    
+
     func fetchUserData(){
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         do{
             let results = try context.fetch(request) as! [NSManagedObject]
-            
-            // gatau ini for nya ga masuk
-            for data in results {
+            for data in results{
                 userArray.append(users(email: data.value(forKey: "email") as! String, password: data.value(forKey: "password") as! String))
-                print("data: ", data)
             }
         }catch{
-            print("Fetching Failed!")
+            print("Fetching failed!")
         }
     }
     
-    func showAlert(title: String, message: String){
+    func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-    
-
-    
     
 }
