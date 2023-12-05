@@ -35,12 +35,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.hidesBackButton = true
         
         initializeGames()
-        //        gameTableView.dataSource = self
-        //        gameTableView.delegate = self
+        gameTableView.dataSource = self
+        gameTableView.delegate = self
     }
     
     func fetchGameData(){
@@ -56,4 +55,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
     }
+    
+    func gameTableView(_ gameTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = gameTableView.dequeueReusableCell(withIdentifier: "cellGames") as! HomeTableViewCell
+            
+            cell.nameLbl.text = gameList[indexPath.row].name
+            cell.categoryLbl.text = gameList[indexPath.row].category
+            cell.descLbl.text = gameList[indexPath.row].description
+            cell.priceLbl.text = "Rp. \(gameList[indexPath.row].price)"
+            cell.gamesImg.image = UIImage(named: gameList[indexPath.row].image!)
+            
+            return cell
+        }
 }

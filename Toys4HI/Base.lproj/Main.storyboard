@@ -581,27 +581,6 @@
             <point key="canvasLocation" x="1945.8015267175572" y="664.78873239436621"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="XrN-fs-1Ys">
-            <objects>
-                <viewController id="tAA-vE-PCj" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aH4-QU-C1E">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 1-2" translatesAutoresizingMaskIntoConstraints="NO" id="7EL-Be-UfE">
-                                <rect key="frame" x="65" y="257" width="262" height="204"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="WpK-v0-avr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XI9-6w-fWk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1706.1068702290077" y="-65.492957746478879"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="H2l-hH-cDt">
             <objects>
                 <viewController id="2LU-Ex-hzK" sceneMemberID="viewController">
@@ -709,7 +688,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group 1-2" width="244" height="193"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
