@@ -10,6 +10,8 @@
 		0508AFBB2B1DBD8000489E72 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508AFBA2B1DBD8000489E72 /* Users.swift */; };
 		0508AFBD2B1DBDC200489E72 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508AFBC2B1DBDC200489E72 /* Games.swift */; };
 		0546394D2B1EDCA700F09D30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546394C2B1EDCA700F09D30 /* HomeViewController.swift */; };
+		054639512B1EE41500F09D30 /* GameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546394E2B1EE3A200F09D30 /* GameTableViewController.swift */; };
+		054639532B1EF2CB00F09D30 /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054639522B1EF2CB00F09D30 /* AddGameViewController.swift */; };
 		0565B56F2B15B64B00AAE458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B56E2B15B64B00AAE458 /* AppDelegate.swift */; };
 		0565B5712B15B64B00AAE458 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5702B15B64B00AAE458 /* SceneDelegate.swift */; };
 		0565B5732B15B64B00AAE458 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5722B15B64B00AAE458 /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		0508AFBA2B1DBD8000489E72 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		0508AFBC2B1DBDC200489E72 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		0546394C2B1EDCA700F09D30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0546394E2B1EE3A200F09D30 /* GameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewController.swift; sourceTree = "<group>"; };
+		054639522B1EF2CB00F09D30 /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 		0565B56B2B15B64B00AAE458 /* Toys4HI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toys4HI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0565B56E2B15B64B00AAE458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0565B5702B15B64B00AAE458 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				0565B5772B15B64B00AAE458 /* Toys4HI.xcdatamodeld */,
 				05E6C6272B187FFB0017A607 /* AdminViewController.swift */,
 				0546394C2B1EDCA700F09D30 /* HomeViewController.swift */,
+				054639522B1EF2CB00F09D30 /* AddGameViewController.swift */,
+				0546394E2B1EE3A200F09D30 /* GameTableViewController.swift */,
 			);
 			path = Toys4HI;
 			sourceTree = "<group>";
@@ -288,12 +294,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0508AFBB2B1DBD8000489E72 /* Users.swift in Sources */,
+				054639512B1EE41500F09D30 /* GameTableViewController.swift in Sources */,
 				05E6C6282B187FFB0017A607 /* AdminViewController.swift in Sources */,
 				05E6C62A2B1885220017A607 /* SignUpViewController.swift in Sources */,
 				0508AFBD2B1DBDC200489E72 /* Games.swift in Sources */,
 				0565B5792B15B64B00AAE458 /* Toys4HI.xcdatamodeld in Sources */,
 				0546394D2B1EDCA700F09D30 /* HomeViewController.swift in Sources */,
 				0565B5732B15B64B00AAE458 /* ViewController.swift in Sources */,
+				054639532B1EF2CB00F09D30 /* AddGameViewController.swift in Sources */,
 				0565B56F2B15B64B00AAE458 /* AppDelegate.swift in Sources */,
 				0593712C2B15C9250069313B /* SignInViewController.swift in Sources */,
 				0565B5712B15B64B00AAE458 /* SceneDelegate.swift in Sources */,

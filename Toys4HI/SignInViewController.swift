@@ -42,6 +42,7 @@ class SignInViewController: UIViewController {
             if let adminView = storyboard?.instantiateViewController(withIdentifier: "adminView"){
                 self.navigationController?.pushViewController(adminView, animated: true)
             }
+            showAlert(title: "Welcome to admin dashboard!", message: "")
         }
         
         if !(email.hasSuffix(".com") && email.contains("@")) {
