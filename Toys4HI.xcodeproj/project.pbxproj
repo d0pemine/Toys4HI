@@ -10,18 +10,21 @@
 		0508AFBB2B1DBD8000489E72 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508AFBA2B1DBD8000489E72 /* Users.swift */; };
 		0508AFBD2B1DBDC200489E72 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508AFBC2B1DBDC200489E72 /* Games.swift */; };
 		0546394D2B1EDCA700F09D30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546394C2B1EDCA700F09D30 /* HomeViewController.swift */; };
-		054639512B1EE41500F09D30 /* GameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546394E2B1EE3A200F09D30 /* GameTableViewController.swift */; };
 		054639532B1EF2CB00F09D30 /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054639522B1EF2CB00F09D30 /* AddGameViewController.swift */; };
 		0565B56F2B15B64B00AAE458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B56E2B15B64B00AAE458 /* AppDelegate.swift */; };
 		0565B5712B15B64B00AAE458 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5702B15B64B00AAE458 /* SceneDelegate.swift */; };
 		0565B5732B15B64B00AAE458 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5722B15B64B00AAE458 /* ViewController.swift */; };
-		0565B5762B15B64B00AAE458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0565B5742B15B64B00AAE458 /* Main.storyboard */; };
 		0565B5792B15B64B00AAE458 /* Toys4HI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5772B15B64B00AAE458 /* Toys4HI.xcdatamodeld */; };
 		0565B57B2B15B64C00AAE458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0565B57A2B15B64C00AAE458 /* Assets.xcassets */; };
 		0565B57E2B15B64C00AAE458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0565B57C2B15B64C00AAE458 /* LaunchScreen.storyboard */; };
 		0565B5892B15B64C00AAE458 /* Toys4HITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5882B15B64C00AAE458 /* Toys4HITests.swift */; };
 		0565B5932B15B64C00AAE458 /* Toys4HIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5922B15B64C00AAE458 /* Toys4HIUITests.swift */; };
 		0565B5952B15B64C00AAE458 /* Toys4HIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5942B15B64C00AAE458 /* Toys4HIUITestsLaunchTests.swift */; };
+		058ABC9D2B26C44200F61CFC /* AdminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ABC9C2B26C44200F61CFC /* AdminTableViewCell.swift */; };
+		058ABC9F2B26C52B00F61CFC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ABC9E2B26C52B00F61CFC /* HomeTableViewCell.swift */; };
+		058ABCA32B26C72B00F61CFC /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ABCA22B26C72B00F61CFC /* ShopViewController.swift */; };
+		058ABCA52B26C76D00F61CFC /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ABCA42B26C76D00F61CFC /* ShopTableViewCell.swift */; };
+		058ABCA82B26DEBD00F61CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058ABCA62B26DEBD00F61CFC /* Main.storyboard */; };
 		0593712C2B15C9250069313B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0593712B2B15C9250069313B /* SignInViewController.swift */; };
 		05E6C6282B187FFB0017A607 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6C6272B187FFB0017A607 /* AdminViewController.swift */; };
 		05E6C62A2B1885220017A607 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6C6292B1885220017A607 /* SignUpViewController.swift */; };
@@ -48,13 +51,11 @@
 		0508AFBA2B1DBD8000489E72 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		0508AFBC2B1DBDC200489E72 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		0546394C2B1EDCA700F09D30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0546394E2B1EE3A200F09D30 /* GameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewController.swift; sourceTree = "<group>"; };
 		054639522B1EF2CB00F09D30 /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 		0565B56B2B15B64B00AAE458 /* Toys4HI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toys4HI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0565B56E2B15B64B00AAE458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0565B5702B15B64B00AAE458 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0565B5722B15B64B00AAE458 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0565B5752B15B64B00AAE458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0565B5782B15B64B00AAE458 /* Toys4HI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Toys4HI.xcdatamodel; sourceTree = "<group>"; };
 		0565B57A2B15B64C00AAE458 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0565B57D2B15B64C00AAE458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +65,11 @@
 		0565B58E2B15B64C00AAE458 /* Toys4HIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Toys4HIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0565B5922B15B64C00AAE458 /* Toys4HIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toys4HIUITests.swift; sourceTree = "<group>"; };
 		0565B5942B15B64C00AAE458 /* Toys4HIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toys4HIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		058ABC9C2B26C44200F61CFC /* AdminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTableViewCell.swift; sourceTree = "<group>"; };
+		058ABC9E2B26C52B00F61CFC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		058ABCA22B26C72B00F61CFC /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		058ABCA42B26C76D00F61CFC /* ShopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
+		058ABCA72B26DEBD00F61CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0593712B2B15C9250069313B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		05E6C6272B187FFB0017A607 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		05E6C6292B1885220017A607 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -132,15 +138,18 @@
 				0565B56E2B15B64B00AAE458 /* AppDelegate.swift */,
 				0565B5702B15B64B00AAE458 /* SceneDelegate.swift */,
 				0565B5722B15B64B00AAE458 /* ViewController.swift */,
-				0565B5742B15B64B00AAE458 /* Main.storyboard */,
+				058ABCA62B26DEBD00F61CFC /* Main.storyboard */,
 				0565B57A2B15B64C00AAE458 /* Assets.xcassets */,
 				0565B57C2B15B64C00AAE458 /* LaunchScreen.storyboard */,
 				0565B57F2B15B64C00AAE458 /* Info.plist */,
 				0565B5772B15B64B00AAE458 /* Toys4HI.xcdatamodeld */,
-				05E6C6272B187FFB0017A607 /* AdminViewController.swift */,
 				0546394C2B1EDCA700F09D30 /* HomeViewController.swift */,
+				058ABC9E2B26C52B00F61CFC /* HomeTableViewCell.swift */,
+				058ABCA22B26C72B00F61CFC /* ShopViewController.swift */,
+				058ABCA42B26C76D00F61CFC /* ShopTableViewCell.swift */,
+				05E6C6272B187FFB0017A607 /* AdminViewController.swift */,
+				058ABC9C2B26C44200F61CFC /* AdminTableViewCell.swift */,
 				054639522B1EF2CB00F09D30 /* AddGameViewController.swift */,
-				0546394E2B1EE3A200F09D30 /* GameTableViewController.swift */,
 			);
 			path = Toys4HI;
 			sourceTree = "<group>";
@@ -266,9 +275,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058ABCA82B26DEBD00F61CFC /* Main.storyboard in Resources */,
 				0565B57E2B15B64C00AAE458 /* LaunchScreen.storyboard in Resources */,
 				0565B57B2B15B64C00AAE458 /* Assets.xcassets in Resources */,
-				0565B5762B15B64B00AAE458 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,8 +303,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0508AFBB2B1DBD8000489E72 /* Users.swift in Sources */,
-				054639512B1EE41500F09D30 /* GameTableViewController.swift in Sources */,
 				05E6C6282B187FFB0017A607 /* AdminViewController.swift in Sources */,
+				058ABCA32B26C72B00F61CFC /* ShopViewController.swift in Sources */,
+				058ABC9F2B26C52B00F61CFC /* HomeTableViewCell.swift in Sources */,
+				058ABC9D2B26C44200F61CFC /* AdminTableViewCell.swift in Sources */,
 				05E6C62A2B1885220017A607 /* SignUpViewController.swift in Sources */,
 				0508AFBD2B1DBDC200489E72 /* Games.swift in Sources */,
 				0565B5792B15B64B00AAE458 /* Toys4HI.xcdatamodeld in Sources */,
@@ -305,6 +316,7 @@
 				0565B56F2B15B64B00AAE458 /* AppDelegate.swift in Sources */,
 				0593712C2B15C9250069313B /* SignInViewController.swift in Sources */,
 				0565B5712B15B64B00AAE458 /* SceneDelegate.swift in Sources */,
+				058ABCA52B26C76D00F61CFC /* ShopTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,20 +353,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0565B5742B15B64B00AAE458 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0565B5752B15B64B00AAE458 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0565B57C2B15B64C00AAE458 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0565B57D2B15B64C00AAE458 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		058ABCA62B26DEBD00F61CFC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				058ABCA72B26DEBD00F61CFC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
