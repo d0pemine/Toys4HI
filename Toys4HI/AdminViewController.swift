@@ -16,7 +16,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
     var gameList = [games]()
     var context: NSManagedObjectContext!
     
-    func fetchGameData() {
+    func loadGame() {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Games")
         
         do {
@@ -38,28 +38,38 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
+    func initGames(){
+            gameList.append(games(name: "The Legend of Zelda: Tears of the Kingdom", category: "Open-world, Adventure" ,description: "An epic adventure awaits in The Legend of Zelda: Tears of the Kingdom game, only on the Nintendo Switch system.", price: 899000, image: "zelda"))
+            gameList.append(games(name: "Marvel's Spider-Man 2", category: "Open-world, Action", description: "Spider-Men, Peter Parker, and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel's Spider-Man franchise for PS5.", price: 119900, image: "spiderman"))
+            gameList.append(games(name: "Mortal Kombat 1", category: "Fighting, Action", description: "Discover a reborn Mortal Kombat Universe created by the Fire God Liu Kang. Mortal Kombat 1 ushers in a new era of the iconic franchise with a new fighting system, game modes, and fatalities!", price: 1499000, image: "mortalkombat"))
+        }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 259
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gameList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellGames") as! AdminTableViewCell
-        print("Configuring cell for row \(indexPath.row)")
         
-        cell.nameLbl.text = gameList[indexPath.row].name
-        cell.categoryLbl.text = gameList[indexPath.row].category
-        cell.descLbl.text = gameList[indexPath.row].description
-        cell.priceLbl.text = "Rp\(gameList[indexPath.row].price)"
-        cell.gameImage.image = UIImage(named: gameList[indexPath.row].image!)
+        let cellName = gameList[indexPath.row].name
+        let cellCategory = gameList[indexPath.row].category
+        let cellDesc = gameList[indexPath.row].description
+        let cellPrice = "Rp. \(gameList[indexPath.row].price)"
+        _ = gameList[indexPath.row].image
         
+        cell.nameLbl.text = cellName
+        cell.categoryLbl.text = cellCategory
+        cell.descLbl.text = cellDesc
+        cell.priceLbl.text = cellPrice
+        cell.gameImage.image = UIImage(named: "games")
         
         return cell
     }
     
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 259
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,11 +78,12 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         tvGames.delegate = self
         tvGames.dataSource = self
         
+        initGames()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         context = appDelegate.persistentContainer.viewContext
         
-        fetchGameData()
+        loadGame()
         
         for data in gameList {
             print(data.name!)

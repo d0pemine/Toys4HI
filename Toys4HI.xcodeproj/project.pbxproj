@@ -10,7 +10,6 @@
 		0508AFBB2B1DBD8000489E72 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508AFBA2B1DBD8000489E72 /* Users.swift */; };
 		0508AFBD2B1DBDC200489E72 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508AFBC2B1DBDC200489E72 /* Games.swift */; };
 		0546394D2B1EDCA700F09D30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546394C2B1EDCA700F09D30 /* HomeViewController.swift */; };
-		054639532B1EF2CB00F09D30 /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054639522B1EF2CB00F09D30 /* AddGameViewController.swift */; };
 		0565B56F2B15B64B00AAE458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B56E2B15B64B00AAE458 /* AppDelegate.swift */; };
 		0565B5712B15B64B00AAE458 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5702B15B64B00AAE458 /* SceneDelegate.swift */; };
 		0565B5732B15B64B00AAE458 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5722B15B64B00AAE458 /* ViewController.swift */; };
@@ -20,6 +19,7 @@
 		0565B5892B15B64C00AAE458 /* Toys4HITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5882B15B64C00AAE458 /* Toys4HITests.swift */; };
 		0565B5932B15B64C00AAE458 /* Toys4HIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5922B15B64C00AAE458 /* Toys4HIUITests.swift */; };
 		0565B5952B15B64C00AAE458 /* Toys4HIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5942B15B64C00AAE458 /* Toys4HIUITestsLaunchTests.swift */; };
+		056E59372B28422600A0E205 /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056E59362B28422600A0E205 /* AddGameViewController.swift */; };
 		058ABC9D2B26C44200F61CFC /* AdminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ABC9C2B26C44200F61CFC /* AdminTableViewCell.swift */; };
 		058ABC9F2B26C52B00F61CFC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ABC9E2B26C52B00F61CFC /* HomeTableViewCell.swift */; };
 		058ABCA32B26C72B00F61CFC /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058ABCA22B26C72B00F61CFC /* ShopViewController.swift */; };
@@ -51,7 +51,6 @@
 		0508AFBA2B1DBD8000489E72 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		0508AFBC2B1DBDC200489E72 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		0546394C2B1EDCA700F09D30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		054639522B1EF2CB00F09D30 /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 		0565B56B2B15B64B00AAE458 /* Toys4HI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toys4HI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0565B56E2B15B64B00AAE458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0565B5702B15B64B00AAE458 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		0565B58E2B15B64C00AAE458 /* Toys4HIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Toys4HIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0565B5922B15B64C00AAE458 /* Toys4HIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toys4HIUITests.swift; sourceTree = "<group>"; };
 		0565B5942B15B64C00AAE458 /* Toys4HIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toys4HIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		056E59362B28422600A0E205 /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 		058ABC9C2B26C44200F61CFC /* AdminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTableViewCell.swift; sourceTree = "<group>"; };
 		058ABC9E2B26C52B00F61CFC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		058ABCA22B26C72B00F61CFC /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 				058ABCA42B26C76D00F61CFC /* ShopTableViewCell.swift */,
 				05E6C6272B187FFB0017A607 /* AdminViewController.swift */,
 				058ABC9C2B26C44200F61CFC /* AdminTableViewCell.swift */,
-				054639522B1EF2CB00F09D30 /* AddGameViewController.swift */,
+				056E59362B28422600A0E205 /* AddGameViewController.swift */,
 			);
 			path = Toys4HI;
 			sourceTree = "<group>";
@@ -307,12 +307,12 @@
 				058ABCA32B26C72B00F61CFC /* ShopViewController.swift in Sources */,
 				058ABC9F2B26C52B00F61CFC /* HomeTableViewCell.swift in Sources */,
 				058ABC9D2B26C44200F61CFC /* AdminTableViewCell.swift in Sources */,
+				056E59372B28422600A0E205 /* AddGameViewController.swift in Sources */,
 				05E6C62A2B1885220017A607 /* SignUpViewController.swift in Sources */,
 				0508AFBD2B1DBDC200489E72 /* Games.swift in Sources */,
 				0565B5792B15B64B00AAE458 /* Toys4HI.xcdatamodeld in Sources */,
 				0546394D2B1EDCA700F09D30 /* HomeViewController.swift in Sources */,
 				0565B5732B15B64B00AAE458 /* ViewController.swift in Sources */,
-				054639532B1EF2CB00F09D30 /* AddGameViewController.swift in Sources */,
 				0565B56F2B15B64B00AAE458 /* AppDelegate.swift in Sources */,
 				0593712C2B15C9250069313B /* SignInViewController.swift in Sources */,
 				0565B5712B15B64B00AAE458 /* SceneDelegate.swift in Sources */,

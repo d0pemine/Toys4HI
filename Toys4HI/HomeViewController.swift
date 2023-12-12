@@ -16,7 +16,6 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
     var context: NSManagedObjectContext!
     var email: String?
     
-    
     func loadGame() {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Games")
         
@@ -45,23 +44,6 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
             gameList.append(games(name: "Mortal Kombat 1", category: "Fighting, Action", description: "Discover a reborn Mortal Kombat Universe created by the Fire God Liu Kang. Mortal Kombat 1 ushers in a new era of the iconic franchise with a new fighting system, game modes, and fatalities!", price: 1499000, image: "mortalkombat"))
         }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
-        
-        initGames()
-        tvGames.dataSource = self
-        tvGames.delegate = self
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        context = appDelegate.persistentContainer.viewContext
-        
-        loadGame()
-
-    }
-    
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 259
     }
@@ -77,7 +59,7 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
         let cellCategory = gameList[indexPath.row].category
         let cellDesc = gameList[indexPath.row].description
         let cellPrice = "Rp. \(gameList[indexPath.row].price)"
-        let cellImage = gameList[indexPath.row].image
+        _ = gameList[indexPath.row].image
         
         cell.nameLbl.text = cellName
         cell.categoryLbl.text = cellCategory
@@ -86,6 +68,22 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
         cell.gamesImg.image = UIImage(named: "games")
 
         return cell
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        
+        initGames()
+        tvGames.dataSource = self
+        tvGames.delegate = self
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        context = appDelegate.persistentContainer.viewContext
+        
+        loadGame()
+
     }
 
 }
