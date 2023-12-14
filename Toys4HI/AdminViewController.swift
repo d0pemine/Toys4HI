@@ -96,4 +96,10 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     
+    @IBAction func deleteBtn(_ sender: Any) {
+        
+        
+    }
+    
+    
 }

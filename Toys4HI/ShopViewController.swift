@@ -26,11 +26,6 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
             context = appDelegate.persistentContainer.viewContext
                 
         fetchedData()
-
-        for data in gameList {
-            print(data.name)
-            print(data.price)
-        }
     }
     
     func initGames(){
