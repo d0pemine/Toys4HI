@@ -106,7 +106,33 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     
     @IBAction func deleteBtn(_ sender: Any) {
+        if let selectedIndexPaths = tvCart.indexPathsForSelectedRows {
+                let sortedIndices = selectedIndexPaths.map { $0.row }.sorted(by: >)
+
+                for index in sortedIndices {
+                    let selectedManagedObject = shopList[index] as? NSManagedObject
+                    
+                    shopList.remove(at: index)
+
         
+                    tvCart.deleteRows(at: [IndexPath(row: index, section: 0)], with: .fade)
+
+                    if let selectedItem = selectedManagedObject {
+                        context.delete(selectedItem)
+
+                        do {
+                            try context.save()
+                            print("Item deleted successfully")
+                        } catch {
+                            print("Error saving context after deleting item: \(error)")
+                        }
+                    } else {
+                        print("Error: Unable to get the selected NSManagedObject")
+                    }
+                }
+            } else {
+                showAlert(title: "Error", message: "Please select items to delete.")
+            }
     }
-    
+
 }
