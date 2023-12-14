@@ -67,9 +67,14 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
 
             let addTo = NSManagedObject(entity: entityTarget!, insertInto: self.context)
 
-            addTo.setValue(cellName, forKey: "gameName")
-            addTo.setValue(cellPrice, forKey: "gamePrice")
             addTo.setValue(cellImage, forKey: "gameImage")
+            addTo.setValue(cellName, forKey: "gameName")
+            let priceStringWithoutCurrency = cellPrice.replacingOccurrences(of: "Rp. ", with: "")
+            if let priceAsInt = Int(priceStringWithoutCurrency) {
+                addTo.setValue(NSNumber(value: priceAsInt), forKey: "gamePrice")
+            } else {
+                print("Error: Unable to convert \(priceStringWithoutCurrency) to Int")
+            }
 
             do {
                 try self.context.save()

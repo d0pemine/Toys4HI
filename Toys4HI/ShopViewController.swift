@@ -11,7 +11,8 @@ import CoreData
 class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet weak var tvCart: UITableView!
-
+    @IBOutlet weak var totalPrice: UILabel!
+    
     var shopList = [shop]()
     var context: NSManagedObjectContext!
     
@@ -37,8 +38,8 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
                     shopList.append(shop(
                         name: (data.value(forKey: "gameName") as! String),
                         price: (data.value(forKey: "gamePrice") as! Int),
-                        image: (data.value(forKey: "gameImage") as! String),
-                        quantity: (data.value(forKey: "gameQty") as! Int)
+                        image: (data.value(forKey: "gameImage") as! String)
+                     
                     ))
                 }
                 
@@ -54,12 +55,11 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         let cellName = shopList[indexPath.row].name
         let cellPrice = "Rp. \(shopList[indexPath.row].price)"
-        let cellQty = " \(shopList[indexPath.row].quantity)"
+        let cellImage = shopList[indexPath.row].image
         
         cell.nameLabel.text = cellName
         cell.priceLabel.text = cellPrice
-        cell.quantityTextField.text = cellQty
-        cell.gameImage.image = UIImage(named: shopList[indexPath.row].image!)
+        cell.gameImage.image = UIImage(named: cellImage!)
         
         return cell
         
@@ -88,10 +88,11 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
             }
             
             try context.save()
+            
             fetchedData()
-                
             showAlert(title: "Payment Success", message: "Thank you for shopping")
-        }catch{
+            
+        } catch{
             print("Error deleting")
         }
     }

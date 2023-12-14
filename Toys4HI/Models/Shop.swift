@@ -11,5 +11,4 @@ struct shop {
     var name: String?
     var price: Int
     var image: String?
-    var quantity: Int
 }
