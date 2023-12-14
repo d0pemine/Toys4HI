@@ -25,10 +25,10 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
             for data in results {
                     gameList.append(games(
                     name: (data.value(forKey: "gameName") as! String),
-                    category: (data.value(forKey: "category") as! String),
-                    description: (data.value(forKey: "gameDesc") as! String),
-                    price: (data.value(forKey: "price") as! Int),
-                    image: (data.value(forKey: "image") as! String)
+                    category: (data.value(forKey: "gameCategory") as! String),
+                    description: (data.value(forKey: "gameDescription") as! String),
+                    price: (data.value(forKey: "gamePrice") as! Int),
+                    image: (data.value(forKey: "gameImage") as! String)
                 ))
             }
             print("Fetch success")
@@ -38,11 +38,6 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
-    func initGames(){
-            gameList.append(games(name: "The Legend of Zelda: Tears of the Kingdom", category: "Open-world, Adventure" ,description: "An epic adventure awaits in The Legend of Zelda: Tears of the Kingdom game, only on the Nintendo Switch system.", price: 899000, image: "zelda"))
-            gameList.append(games(name: "Marvel's Spider-Man 2", category: "Open-world, Action", description: "Spider-Men, Peter Parker, and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel's Spider-Man franchise for PS5.", price: 119900, image: "spiderman"))
-            gameList.append(games(name: "Mortal Kombat 1", category: "Fighting, Action", description: "Discover a reborn Mortal Kombat Universe created by the Fire God Liu Kang. Mortal Kombat 1 ushers in a new era of the iconic franchise with a new fighting system, game modes, and fatalities!", price: 1499000, image: "mortalkombat"))
-        }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 259
@@ -59,13 +54,12 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cellCategory = gameList[indexPath.row].category
         let cellDesc = gameList[indexPath.row].description
         let cellPrice = "Rp. \(gameList[indexPath.row].price)"
-        _ = gameList[indexPath.row].image
         
         cell.nameLbl.text = cellName
         cell.categoryLbl.text = cellCategory
         cell.descLbl.text = cellDesc
         cell.priceLbl.text = cellPrice
-        cell.gameImage.image = UIImage(named: "games")
+        cell.gameImage.image = UIImage(named: gameList[indexPath.row].image!)
         
         return cell
     }
@@ -78,7 +72,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         tvGames.delegate = self
         tvGames.dataSource = self
         
-        initGames()
+        //initGames()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         context = appDelegate.persistentContainer.viewContext

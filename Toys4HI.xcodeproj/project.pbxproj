@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0508AFBB2B1DBD8000489E72 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508AFBA2B1DBD8000489E72 /* Users.swift */; };
 		0508AFBD2B1DBDC200489E72 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508AFBC2B1DBDC200489E72 /* Games.swift */; };
+		052DAC882B2ACE2700D22A8E /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052DAC872B2ACE2700D22A8E /* Shop.swift */; };
 		0546394D2B1EDCA700F09D30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546394C2B1EDCA700F09D30 /* HomeViewController.swift */; };
 		0565B56F2B15B64B00AAE458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B56E2B15B64B00AAE458 /* AppDelegate.swift */; };
 		0565B5712B15B64B00AAE458 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0565B5702B15B64B00AAE458 /* SceneDelegate.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		0508AFBA2B1DBD8000489E72 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		0508AFBC2B1DBDC200489E72 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		052DAC872B2ACE2700D22A8E /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		0546394C2B1EDCA700F09D30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0565B56B2B15B64B00AAE458 /* Toys4HI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toys4HI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0565B56E2B15B64B00AAE458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				0508AFBA2B1DBD8000489E72 /* Users.swift */,
 				0508AFBC2B1DBDC200489E72 /* Games.swift */,
+				052DAC872B2ACE2700D22A8E /* Shop.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				0593712C2B15C9250069313B /* SignInViewController.swift in Sources */,
 				0565B5712B15B64B00AAE458 /* SceneDelegate.swift in Sources */,
 				058ABCA52B26C76D00F61CFC /* ShopTableViewCell.swift in Sources */,
+				052DAC882B2ACE2700D22A8E /* Shop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -56,6 +56,8 @@ class AddGameViewController: UIViewController {
             newGame.setValue(gameCategory, forKey: "gameCategory")
             newGame.setValue(gameDescription, forKey: "gameDescription")
             newGame.setValue(Int(gamePrice), forKey: "gamePrice")
+            newGame.setValue("games", forKey: "gameImage")
+            
         }
                 
         do{

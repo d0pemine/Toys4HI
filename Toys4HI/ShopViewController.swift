@@ -18,7 +18,6 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        initGames()
         tvCart.delegate = self
         tvCart.dataSource = self
         
@@ -27,25 +26,19 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 
         fetchedData()
     }
-    
-    func initGames(){
-            gameList.append(games(name: "The Legend of Zelda: Tears of the Kingdom", category: "Open-world, Adventure" ,description: "An epic adventure awaits in The Legend of Zelda: Tears of the Kingdom game, only on the Nintendo Switch system.", price: 899000, image: "zelda"))
-            gameList.append(games(name: "Marvel's Spider-Man 2", category: "Open-world, Action", description: "Spider-Men, Peter Parker, and Miles Morales, return for an exciting new adventure in the critically acclaimed Marvel's Spider-Man franchise for PS5.", price: 119900, image: "spiderman"))
-            gameList.append(games(name: "Mortal Kombat 1", category: "Fighting, Action", description: "Discover a reborn Mortal Kombat Universe created by the Fire God Liu Kang. Mortal Kombat 1 ushers in a new era of the iconic franchise with a new fighting system, game modes, and fatalities!", price: 1499000, image: "mortalkombat"))
-        }
+
     
     func fetchedData(){
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Games")
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Shop")
             do{
                 let results = try context.fetch(request) as! [NSManagedObject]
                 
                 for data in results {
                         gameList.append(games(
                         name: (data.value(forKey: "gameName") as! String),
-                        category: (data.value(forKey: "category") as! String),
-                        description: (data.value(forKey: "gameDesc") as! String),
-                        price: (data.value(forKey: "price") as! Int),
-                        image: (data.value(forKey: "image") as! String)
+                        price: (data.value(forKey: "gamePrice") as! Int),
+                        image: (data.value(forKey: "gameImage") as! String),
+                        quantity: (data.value(forKey: "gameQty") as! Int)
                     ))
                 }
                 
@@ -61,11 +54,11 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         let cellName = gameList[indexPath.row].name
         let cellPrice = "Rp. \(gameList[indexPath.row].price)"
-        _ = gameList[indexPath.row].image
+        let cellQty = " \(gameList[indexPath.row].quantity)"
         
         cell.nameLabel.text = cellName
         cell.priceLabel.text = cellPrice
-        cell.gameImage.image = UIImage(named: "games")
+        cell.gameImage.image = UIImage(named: gameList[indexPath.row].image!)
         
         return cell
         
