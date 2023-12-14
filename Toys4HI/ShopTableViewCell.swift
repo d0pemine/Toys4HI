@@ -16,6 +16,10 @@ class ShopTableViewCell: UITableViewCell {
     
     @IBOutlet weak var priceLabel: UILabel!
     
+    @IBOutlet weak var quantityTextField: UITextField!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

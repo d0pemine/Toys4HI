@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  Toys4HI
 //
-//  Created by prk on 12/5/23.
+//  Created by prk on 12/11/23.
 //
 
 import UIKit
@@ -54,12 +54,30 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
         let cellCategory = gameList[indexPath.row].category
         let cellDesc = gameList[indexPath.row].description
         let cellPrice = "Rp. \(gameList[indexPath.row].price)"
+        let cellImage = gameList[indexPath.row].image
         
         cell.nameLbl.text = cellName
         cell.categoryLbl.text = cellCategory
         cell.descLbl.text = cellDesc
         cell.priceLbl.text = cellPrice
-        cell.gamesImg.image = UIImage(named: gameList[indexPath.row].image!)
+        cell.gamesImg.image = UIImage(named: cellImage!)
+        
+        cell.handleInsert = {
+            let entityTarget = NSEntityDescription.entity(forEntityName: "Shop", in: self.context)
+
+            let addTo = NSManagedObject(entity: entityTarget!, insertInto: self.context)
+
+            addTo.setValue(cellName, forKey: "gameName")
+            addTo.setValue(cellPrice, forKey: "gamePrice")
+            addTo.setValue(cellImage, forKey: "gameImage")
+
+            do {
+                try self.context.save()
+                print("Added to cart")
+            } catch {
+                print("Error while adding to cart")
+            }
+        }
 
         return cell
     }

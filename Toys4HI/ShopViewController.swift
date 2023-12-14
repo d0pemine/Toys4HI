@@ -12,7 +12,7 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     @IBOutlet weak var tvCart: UITableView!
 
-    var gameList = [games]()
+    var shopList = [shop]()
     var context: NSManagedObjectContext!
     
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 let results = try context.fetch(request) as! [NSManagedObject]
                 
                 for data in results {
-                        gameList.append(games(
+                    shopList.append(shop(
                         name: (data.value(forKey: "gameName") as! String),
                         price: (data.value(forKey: "gamePrice") as! Int),
                         image: (data.value(forKey: "gameImage") as! String),
@@ -52,20 +52,21 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellGames") as! ShopTableViewCell
         
-        let cellName = gameList[indexPath.row].name
-        let cellPrice = "Rp. \(gameList[indexPath.row].price)"
-        let cellQty = " \(gameList[indexPath.row].quantity)"
+        let cellName = shopList[indexPath.row].name
+        let cellPrice = "Rp. \(shopList[indexPath.row].price)"
+        let cellQty = " \(shopList[indexPath.row].quantity)"
         
         cell.nameLabel.text = cellName
         cell.priceLabel.text = cellPrice
-        cell.gameImage.image = UIImage(named: gameList[indexPath.row].image!)
+        cell.quantityTextField.text = cellQty
+        cell.gameImage.image = UIImage(named: shopList[indexPath.row].image!)
         
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gameList.count
+        return shopList.count
     }
     
    
@@ -73,4 +74,38 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 259
     }
+    
+    
+    @IBAction func buyBtn(_ sender: Any) {
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Shop")
+        
+        do{
+            let results = try context.fetch(request) as! [NSManagedObject]
+
+            for data in results{
+                        context.delete(data)
+            }
+            
+            try context.save()
+            fetchedData()
+                
+            showAlert(title: "Payment Success", message: "Thank you for shopping")
+        }catch{
+            print("Error deleting")
+        }
+    }
+    
+    func showAlert(title: String,message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func deleteBtn(_ sender: Any) {
+        
+    }
+    
 }

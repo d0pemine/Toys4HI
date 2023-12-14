@@ -577,6 +577,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Delete"/>
+                                                    <connections>
+                                                        <action selector="deleteBtn:" destination="EL8-hg-Hqp" eventType="touchUpInside" id="QOa-rV-gVT"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4D-Ce-pKc">
                                                     <rect key="frame" x="200" y="40" width="173" height="16"/>
@@ -591,6 +594,7 @@
                                             <outlet property="gameImage" destination="8I7-7D-Bpy" id="crL-i0-mmk"/>
                                             <outlet property="nameLabel" destination="npX-C8-QKg" id="Ohc-vc-iUz"/>
                                             <outlet property="priceLabel" destination="b4D-Ce-pKc" id="NhY-tq-JK3"/>
+                                            <outlet property="quantityTextField" destination="Pvm-P7-DG0" id="XlA-H0-cKU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -611,6 +615,9 @@
                                 <rect key="frame" x="324.66666666666669" y="763" width="53.333333333333314" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Buy"/>
+                                <connections>
+                                    <action selector="buyBtn:" destination="EL8-hg-Hqp" eventType="touchUpInside" id="iVx-9q-T1A"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2hx-HX-PKS"/>
@@ -638,10 +645,10 @@
             </objects>
             <point key="canvasLocation" x="1900" y="567.6056338028169"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Game View Controller-->
         <scene sceneID="k8F-8z-iIF">
             <objects>
-                <viewController id="8sS-9n-0hi" sceneMemberID="viewController">
+                <viewController id="8sS-9n-0hi" customClass="EditGameViewController" customModule="Toys4HI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T02-72-yPZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -707,6 +714,9 @@
                                         <rect key="frame" x="40" y="484" width="317" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Edit"/>
+                                        <connections>
+                                            <action selector="editBtn:" destination="8sS-9n-0hi" eventType="touchUpInside" id="F5k-a1-VU5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="Obh-Wq-iUI"/>
@@ -745,6 +755,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="shR-C3-a4T"/>
+                    <connections>
+                        <outlet property="categoryTextField" destination="nkf-Zc-1g3" id="LWN-eu-zBc"/>
+                        <outlet property="descriptionTextField" destination="iCq-gD-KOI" id="zSM-Qk-sDF"/>
+                        <outlet property="nameTextField" destination="oCc-04-JzC" id="Iqx-Ar-ebI"/>
+                        <outlet property="priceTextField" destination="bxO-Ml-GTb" id="5ic-Ww-r2V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQn-mL-Ncc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

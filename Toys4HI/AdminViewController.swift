@@ -54,12 +54,13 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cellCategory = gameList[indexPath.row].category
         let cellDesc = gameList[indexPath.row].description
         let cellPrice = "Rp. \(gameList[indexPath.row].price)"
+        let cellImage = gameList[indexPath.row].image
         
         cell.nameLbl.text = cellName
         cell.categoryLbl.text = cellCategory
         cell.descLbl.text = cellDesc
         cell.priceLbl.text = cellPrice
-        cell.gameImage.image = UIImage(named: gameList[indexPath.row].image!)
+        cell.gameImage.image = UIImage(named: cellImage!)
         
         return cell
     }
@@ -72,21 +73,11 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         tvGames.delegate = self
         tvGames.dataSource = self
         
-        //initGames()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         context = appDelegate.persistentContainer.viewContext
         
         loadGame()
-        
-        for data in gameList {
-            print(data.name!)
-            print(data.category!)
-            print(data.description!)
-            print(data.price)
-            print("image string: \(data.image!)")
-            print()
-        }
     }
     
     
