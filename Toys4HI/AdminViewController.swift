@@ -80,11 +80,46 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         loadGame()
     }
     
+    func showAlert(title: String,message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     
     @IBAction func deleteBtn(_ sender: Any) {
+        if let selectedIndexPaths = tvGames.indexPathsForSelectedRows {
+                let sortedIndices = selectedIndexPaths.map { $0.row }.sorted(by: >)
+
+                for index in sortedIndices {
+                    let selectedManagedObject = gameList[index] as? NSManagedObject
+                    
+                    gameList.remove(at: index)
+
         
+                    tvGames.deleteRows(at: [IndexPath(row: index, section: 0)], with: .fade)
+
+                    if let selectedItem = selectedManagedObject {
+                        context.delete(selectedItem)
+
+                        do {
+                            try context.save()
+                            print("Item deleted successfully")
+                        } catch {
+                            print("Error saving context after deleting item: \(error)")
+                        }
+                    } else {
+                        print("Error: Unable to get the selected NSManagedObject")
+                    }
+                }
+            } else {
+                showAlert(title: "Error", message: "Please select items to delete.")
+            }
         
     }
+    
+    
     
     
 }
