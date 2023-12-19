@@ -17,6 +17,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
     var context: NSManagedObjectContext!
     
     func loadGame() {
+        gameList.removeAll()
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Games")
         
         do {
@@ -63,6 +64,15 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.priceLbl.text = cellPrice
         cell.gameImage.image = UIImage(named: cellImage!)
         
+        cell.edit = {
+            if let editGame = self.storyboard?.instantiateViewController(withIdentifier: "editGameView") as? EditGameViewController{
+                editGame.selectedGame = self.gameList[indexPath.row]
+                
+                print("di pass:", (editGame.selectedGame.name))
+                self.navigationController?.pushViewController(editGame, animated: true)
+            }
+        }
+        
         return cell
     }
     
@@ -96,37 +106,33 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     @IBAction func deleteBtn(_ sender: Any) {
-        if let selectedIndexPaths = tvGames.indexPathsForSelectedRows {
-                let sortedIndices = selectedIndexPaths.map { $0.row }.sorted(by: >)
-
-                for index in sortedIndices {
-                    let selectedManagedObject = gameList[index] as? NSManagedObject
-                    
-                    gameList.remove(at: index)
-
-        
-                    tvGames.deleteRows(at: [IndexPath(row: index, section: 0)], with: .fade)
-
-                    if let selectedItem = selectedManagedObject {
-                        context.delete(selectedItem)
-
+        if let selectedIndexPath = tvGames.indexPathForSelectedRow {
+            let deletedGame = gameList[selectedIndexPath.row]
+            
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Games")
+            
+            request.predicate = NSPredicate(format: "gameName == %@", deletedGame.name!)
+            
                         do {
-                            try context.save()
-                            print("Item deleted successfully")
+                            if let result = try context.fetch(request).first as? NSManagedObject {context.delete(result)
+                                try context.save()
+                            }
                         } catch {
                             print("Error saving context after deleting item: \(error)")
                         }
-                    } else {
-                        print("Error: Unable to get the selected NSManagedObject")
-                    }
-                }
+            
+            gameList.remove(at: selectedIndexPath.row)
+            tvGames.deleteRows(at: [selectedIndexPath], with: .fade)
             } else {
                 showAlert(title: "Error", message: "Please select items to delete.")
             }
         
     }
     
-    
-    
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadGame()
+    }
 }
+

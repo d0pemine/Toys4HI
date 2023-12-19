@@ -50,6 +50,7 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func fetchedData(){
+        shopList.removeAll()
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Shop")
             do{
                 let results = try context.fetch(request) as! [NSManagedObject]

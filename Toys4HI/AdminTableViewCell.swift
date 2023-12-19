@@ -29,5 +29,13 @@ class AdminTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    var edit = {
+        
+    }
+    
+    @IBAction func editButton(_ sender: Any) {
+        self.edit()
+    }
 
 }

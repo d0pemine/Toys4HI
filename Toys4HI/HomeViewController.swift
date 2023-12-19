@@ -17,6 +17,7 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
     var email: String?
     
     func loadGame() {
+        gameList.removeAll()
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Games")
         
         do {
@@ -104,4 +105,9 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
         loadGame()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadGame()
+    }
 }
