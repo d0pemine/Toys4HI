@@ -24,10 +24,30 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
             context = appDelegate.persistentContainer.viewContext
-                
+        
         fetchedData()
+        setTotalPrice()
     }
 
+    func setTotalPrice(){
+        var totalPriceInt = 0
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Shop")
+        
+        do{
+            let results = try context.fetch(request) as! [NSManagedObject]
+            
+            for data in results {
+                totalPriceInt += (data.value(forKey: "gamePrice") as! Int)
+            }
+            
+            print("totalPrice = ", totalPriceInt)
+        }catch{
+            print("Error fetching total price!")
+        }
+        
+        totalPrice.text = String(totalPriceInt)
+        
+    }
     
     func fetchedData(){
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Shop")
@@ -41,8 +61,9 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
                         image: (data.value(forKey: "gameImage") as! String)
                      
                     ))
+//                    print(shopList)
                 }
-                
+                print(results)
                 print("Fetch success")
                 tvCart.reloadData()
             }catch{
@@ -84,7 +105,7 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
             let results = try context.fetch(request) as! [NSManagedObject]
 
             for data in results{
-                        context.delete(data)
+                context.delete(data)
             }
             
             try context.save()
@@ -104,35 +125,30 @@ class ShopViewController: UIViewController,UITableViewDataSource,UITableViewDele
         present(alertController, animated: true, completion: nil)
     }
     
-    
     @IBAction func deleteBtn(_ sender: Any) {
-        if let selectedIndexPaths = tvCart.indexPathsForSelectedRows {
-                let sortedIndices = selectedIndexPaths.map { $0.row }.sorted(by: >)
-
-                for index in sortedIndices {
-                    let selectedManagedObject = shopList[index] as? NSManagedObject
-                    
-                    shopList.remove(at: index)
-
-        
-                    tvCart.deleteRows(at: [IndexPath(row: index, section: 0)], with: .fade)
-
-                    if let selectedItem = selectedManagedObject {
-                        context.delete(selectedItem)
-
-                        do {
-                            try context.save()
-                            print("Item deleted successfully")
-                        } catch {
-                            print("Error saving context after deleting item: \(error)")
-                        }
-                    } else {
-                        print("Error: Unable to get the selected NSManagedObject")
-                    }
+        if let selectedIndexPath = tvCart.indexPathForSelectedRow {
+            let deletedGame = shopList[selectedIndexPath.row]
+            
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Shop")
+            request.predicate = NSPredicate(format: "gameName == %@", deletedGame.name!)
+            
+            do {
+                if let result = try context.fetch(request).first as? NSManagedObject {
+                    context.delete(result)
+                    try context.save()
                 }
-            } else {
-                showAlert(title: "Error", message: "Please select items to delete.")
+            } catch {
+                print("Error deleting item: \(error)")
             }
+
+            shopList.remove(at: selectedIndexPath.row)
+            tvCart.deleteRows(at: [selectedIndexPath], with: .fade)
+            
+            setTotalPrice()
+        } else {
+            showAlert(title: "Error", message: "Please select an item to delete.")
+        }
     }
+
 
 }

@@ -26,6 +26,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func LoginButton(_ sender: Any) {
+        var flag = false
         fetchUserData()
         
         guard let email = EmailTextField.text, !email.isEmpty else {
@@ -57,7 +58,19 @@ class SignInViewController: UIViewController {
         for user in userArray {
             if (user.email != email || user.password != password){
                 showAlert(title: "Invalid Credential", message: "Email or Password is wrong")
+            }else{
+                flag = true
             }
+        }
+        
+        if(flag == true){
+            goToHome()
+        }
+    }
+    
+    func goToHome(){
+        if let homeView = storyboard?.instantiateViewController(withIdentifier: "homeView"){
+            self.navigationController?.pushViewController(homeView, animated: true)
         }
     }
 
@@ -67,6 +80,7 @@ class SignInViewController: UIViewController {
             let results = try context.fetch(request) as! [NSManagedObject]
             for data in results{
                 userArray.append(users(email: data.value(forKey: "email") as! String, password: data.value(forKey: "password") as! String))
+                print(userArray)
             }
         }catch{
             print("Fetching failed!")

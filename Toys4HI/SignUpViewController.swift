@@ -79,8 +79,9 @@ class SignUpViewController: UIViewController {
         
             do{
                 try context.save()
+                showAlert(title: "Signup Success!", message: "")
             }catch{
-                print("Signup Error!")
+                showAlert(title: "Signup Error!", message: "")
             }
         }
     

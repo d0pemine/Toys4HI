@@ -32,6 +32,7 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
                 ))
             }
             print("Fetch success")
+            print(results)
             tvGames.reloadData()
         } catch {
             print("Cannot fetch game data")
@@ -78,6 +79,12 @@ class AdminViewController: UIViewController, UITableViewDataSource, UITableViewD
         context = appDelegate.persistentContainer.viewContext
         
         loadGame()
+        tvGames.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        tvGames.reloadData()
     }
     
     func showAlert(title: String,message: String) {

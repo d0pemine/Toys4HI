@@ -19,7 +19,6 @@ class AddGameViewController: UIViewController {
         context = appDelegate.persistentContainer.viewContext
     }
     
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descTextField: UITextField!
     @IBOutlet weak var CategoryTextField: UITextField!
@@ -46,6 +45,11 @@ class AddGameViewController: UIViewController {
             showAlert(title: "Game Price is Free???", message: "Really???")
             return
         }
+        
+        guard let gamePriceText = PriceTextField.text, let gamePrice = Double(gamePriceText) else {
+            showAlert(title: "Game Price must be a number", message: "")
+            return
+        }
                 
         let entityTarget = NSEntityDescription.entity(forEntityName: "Games", in: context)
                 
@@ -62,8 +66,14 @@ class AddGameViewController: UIViewController {
                 
         do{
             try context.save()
+            showAlert(title: "Success adding new game!", message: "")
+            
+            if let adminView = storyboard?.instantiateViewController(withIdentifier: "adminView"){
+                self.navigationController?.pushViewController(adminView, animated: true)
+            }
         }catch{
             print("Error Saving Game!")
+            showAlert(title: "Error saving game!", message: "")
         }
         
     }

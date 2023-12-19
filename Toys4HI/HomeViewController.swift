@@ -32,6 +32,7 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
                 ))
             }
             print("Fetch success")
+            print(results)
             tvGames.reloadData()
         } catch {
             print("Cannot fetch game data")
@@ -79,6 +80,7 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
             do {
                 try self.context.save()
                 print("Added to cart")
+                self.tvGames.reloadData()
             } catch {
                 print("Error while adding to cart")
             }
@@ -98,8 +100,8 @@ class HomeViewController: UIViewController,UITableViewDataSource, UITableViewDel
         
         context = appDelegate.persistentContainer.viewContext
         
+        tvGames.reloadData()
         loadGame()
-
     }
 
 }
